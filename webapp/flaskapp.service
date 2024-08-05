@@ -1,0 +1,19 @@
+[Unit]
+Description=Flask Application Service
+ConditionPathExists=/opt/csye6225/webapp
+After=network.target
+
+[Service]
+User=csye6225
+Group=csye6225
+WorkingDirectory=/opt/csye6225/webapp
+ExecStart=/bin/bash -c 'source /opt/csye6225/webapp/venv/bin/activate && pip install flask && export FLASK_APP=/opt/csye6225/webapp/app2.py && flask db init && flask db migrate -m "Initial migration." && flask db upgrade && python3.8 /opt/csye6225/webapp/app2.py'
+Restart=always
+RestartSec=5s
+TimeoutSec=10s
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=csye6225
+
+[Install]
+WantedBy=multi-user.target

@@ -339,7 +339,7 @@ resource "google_cloudfunctions_function" "verify_email_function" {
     failure_policy {
       retry = false
     }
-  }
+  } 
 }
 
 

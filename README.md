@@ -16,7 +16,7 @@ This repository hosts the code for a RESTful API built with Python and Flask, de
 The project implements a layered cloud architecture that optimizes for high availability and secure, scalable performance. Below is an illustration of the cloud architecture setup:
 
 **Cloud Architecture Diagram**
-![image]([https://github.com/](https://github.com/bharathb99/user-directory-gcp-terraform/blob/main/Architecture.png))
+![image](Architecture.png)
 
 
 ### Key Technologies and Implementations
